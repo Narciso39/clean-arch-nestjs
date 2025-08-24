@@ -2,10 +2,11 @@ import { Module } from '@nestjs/common';
 import { AppController } from './app.controller';
 import { AppService } from './app.service';
 import { ConfigModule } from '@nestjs/config';
-import { EnvConfigModuleTsModule } from './shared/infrastructure/env-config/env-config-module.ts.module';
+import { EnvConfigService } from './shared/infrastructure/env-config/env-config.service';
+
 
 @Module({
-  imports: [EnvConfigModuleTsModule],
+  imports: [EnvConfigService],
   controllers: [AppController],
   providers: [AppService],
 })
