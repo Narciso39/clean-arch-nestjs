@@ -6,7 +6,7 @@ import { UsersModule } from './users/infrastructure/users.module';
 
 
 @Module({
-  imports: [EnvConfigModule, UsersModule],
+  imports: [EnvConfigModule.forRoot(), UsersModule],
   controllers: [AppController],
   providers: [AppService],
 })
